@@ -24,25 +24,28 @@ public class CalculatorController {
         return "Привет, это мой первый калькулятор ";
     }
 
-
+// Sum of two fractional numbers
     @GetMapping("/plus")
     public String plus(@RequestParam double num1, @RequestParam double num2) {
 
         return num1 + " + " + num2 + " = " + calculatorService.plus(num1, num2);
     }
 
+//Difference of two fractional numbers 
     @GetMapping("/minus")
     public String minus(@RequestParam double num1, @RequestParam double num2) {
 
         return num1 + " - " + num2 + " = " + calculatorService.minus(num1, num2);
     }
 
+//Multiplication of two fractional numbers
     @GetMapping("/multiply")
     public String multiply(@RequestParam double num1, @RequestParam double num2) {
 
         return num1 + " * " + num2 + " = " + calculatorService.multiply(num1, num2);
     }
 
+//Division of two fractional numbers 
     @GetMapping("/divide")
     public String divide(@RequestParam double num1, @RequestParam double num2) {
 
